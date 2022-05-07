@@ -1,0 +1,192 @@
+body {
+    font-family: "Russo One", sans-serif;
+    background: linear-gradient(45deg, #084177, #687466, #cd8d7b, #fbc490);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}
+
+.navbar-brand{
+    text-decoration:none;
+    font-size: 20px;
+    vertical-align:middle;
+    margin:auto auto;
+}
+
+#imagem{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height:100vh;
+    margin-bottom: 200px;
+}
+#svg-map path { fill:#ffc107;}
+#svg-map path:hover { box-shadow:
+    1px 1px #53a7ea,
+    2px 2px #53a7ea,
+    3px 3px #53a7ea;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);}
+    #svg-map text { fill:#fff; font:12px "Russo One", sans-serif; cursor:pointer }
+    #svg-map a{ text-decoration:none }
+    #svg-map a:hover { cursor:pointer; text-decoration:none }
+    #svg-map a:hover path{ 
+        fill: #ffa500 !important;
+     }
+    #svg-map .circle { fill:#ffc107 }
+    #svg-map a:hover .circle { fill:#ffa500 !important; cursor:pointer }
+
+#busca a{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 25px;
+    justify-content: center !important;
+    text-decoration: none;
+    color: #fff !important;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#busca a:hover{
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+#busca-index a{
+    display: flex;
+    margin-top: 20px;
+    font-size: 25px;
+    justify-content: center !important;
+    text-decoration: none;
+    color: #fff !important;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#busca-index a:hover{
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+#pesquisa1{
+    display: flex;
+    vertical-align: auto;
+    justify-content: center !important;
+}
+#pesquisa2{
+    display: flex;
+    vertical-align: center;
+    justify-content: center !important;
+}
+
+#loading {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+#estado {
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, .75 );
+    font-family: "Russo One", sans-serif;
+    background-size: 500px;
+    font-size: 3em;
+    margin-bottom: 75px;
+
+    
+
+}
+#estado p{
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
+.animacao-cursor {
+    animation: cursor-mouse 500ms steps(40) infinite normal, esconde-texto 4s steps(40) 0s normal;
+}
+
+.cartao{
+    display: flex;
+    justify-content:center;
+    padding: 20px auto;
+    margin-top: 10%;
+    width:350px;
+    box-shadow: 0 0 5px 0px #e2e2e2;
+    position: relative;
+    cursor: pointer;
+}
+.cartao:after, 
+.cartao:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cartao:before{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    transform: scaleY(0);
+}
+
+.cartao:after{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    transform:scaleX(0);
+}
+
+.cartao:hover:before{
+    transform: scaleY(1);
+}
+.cartao:hover:after{
+    transform: scaleX(1);
+}
+.texto{
+    margin: 20px auto;
+    color: #fff;
+}
+
+footer p{
+    font-size: 12px;
+    margin-top: 25%;
+}
+@keyframes esconde-texto {
+    from{
+        width: 0;
+    }
+    to {
+        width: 11.5em
+    }
+}
+
+@keyframes cursor-mouse {
+    from{
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
